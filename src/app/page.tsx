@@ -86,8 +86,10 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-5 gap-2">
+      <label>Enter Spotify Link:</label>
       <Input className="min-w-[250px] max-w-[550px]" type="text" value={url} onChange={(e) => { seturl(e.target.value) }} />
       <p className="text-red-600">{error}</p>
+      <label>Select Background Color:</label>
       <input
         type="color"
         id="color-picker"
@@ -96,6 +98,7 @@ export default function Home() {
         className="color-picker rounded"
       />
 
+      <label>Select inner Color:</label>
       <select value={color} onChange={(e)=>setColor(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block min-w-[250px] max-w-[550px] p-2.5">
         <option>black</option>
         <option>white</option>
